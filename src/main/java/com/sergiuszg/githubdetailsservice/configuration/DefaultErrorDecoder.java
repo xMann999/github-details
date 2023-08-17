@@ -1,6 +1,6 @@
 package com.sergiuszg.githubdetailsservice.configuration;
 
-import com.sergiuszg.githubdetailsservice.exceptions.ResourceNotFoundExceeption;
+import com.sergiuszg.githubdetailsservice.exceptions.ResourceNotFoundException;
 import feign.FeignException;
 import feign.Response;
 import feign.RetryableException;
@@ -24,7 +24,7 @@ public class DefaultErrorDecoder implements ErrorDecoder {
                     response.request());
         }
         if (status == 404) {
-            return new ResourceNotFoundExceeption("Resource not found");
+            return new ResourceNotFoundException("Resource not found");
         }
         return exception;
     }

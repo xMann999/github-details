@@ -11,6 +11,6 @@ import java.util.List;
 @Builder
 public class UserRepositoriesDto {
 
-    private final User details;
-    private final List<Repo> repos;
+    private final UserDto details;
+    private final List<RepoDto> repos;
 }

@@ -2,9 +2,9 @@ package com.sergiuszg.githubdetailsservice.exceptions;
 
 import org.springframework.http.HttpStatus;
 
-public class ResourceNotFoundExceeption extends GeneralException {
+public class ResourceNotFoundException extends GeneralException {
 
-    public ResourceNotFoundExceeption(String message) {
+    public ResourceNotFoundException(String message) {
         super(message, HttpStatus.NOT_FOUND);
     }
 }

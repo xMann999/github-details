@@ -26,7 +26,7 @@ public class GitubDetailsController {
             @ApiResponse(responseCode = "404", description = "Resource not found", content = @Content),
             @ApiResponse(responseCode = "500", description = "Server error", content = @Content)
     })
-    @GetMapping("/{owner}/{repo}")
+    @GetMapping("/repos/{owner}/{repo}")
     RepositoryDetailsDto showRepositoryDetails(@PathVariable String owner, @PathVariable String repo) {
         return githubDetailsService.showRepositoryDetails(owner, repo);
     }
@@ -38,7 +38,7 @@ public class GitubDetailsController {
             @ApiResponse(responseCode = "404", description = "Resource not found", content = @Content),
             @ApiResponse(responseCode = "404", description = "Doctor not found", content = @Content)
     })
-    @GetMapping("/{user}")
+    @GetMapping("/users/{user}")
     UserRepositoriesDto showUserRepositories(@PathVariable String user) {
         return githubDetailsService.showUserRepositories(user);
     }

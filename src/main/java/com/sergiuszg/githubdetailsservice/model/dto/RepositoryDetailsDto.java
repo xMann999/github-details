@@ -12,7 +12,7 @@ import java.util.List;
 @Builder
 public class RepositoryDetailsDto {
 
-    private final List<Branch> branches;
-    private final List<User> collaborators;
-    private final List<Activity> changes;
+    private final List<BranchDto> branches;
+    private final List<UserDto> collaborators;
+    private final List<ActivityDto> changes;
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GeneralExceptionHandler {
 
     @ExceptionHandler(GeneralException.class)
-    public ResponseEntity<String> generalExeptions(GeneralException e) {
+    public ResponseEntity<String> generalExeption(GeneralException e) {
         log.error("{}", e.getMessage());
         return ResponseEntity.status(e.getHttpStatus()).body(e.getMessage());
     }
